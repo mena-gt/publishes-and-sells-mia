@@ -1,0 +1,12 @@
+sequenceDiagram
+    User->>Controller: request
+    Controller->>Service: AddCart
+    Service->>+CartRepository: getOne (userId)
+    CartRepository-->>-Service: CartEntity
+    Service->>+ProductRepository: getOne (productId)
+    ProductRepository-->>-Service: ProductEntity
+    Service->>CartEntity: add (productEntity, quantity)
+    Service->>+CartRepository: save (cartEntity)
+    CartRepository-->>-Service: cartEntity
+    Service-->>Controller: cartEntity
+    Controller-->>User: response

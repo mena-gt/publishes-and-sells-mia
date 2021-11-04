@@ -1,0 +1,27 @@
+{
+  "name": "publishes-and-sells-mia",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node .",
+    "test": "NODE_ENV=testing mocha --recursive --full-trace --exit",
+    "run": "NODE_ENV=production node ."
+  },
+  "keywords": [],
+  "author": "mena-gt",
+  "license": "",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "mariadb": "^2.5.4"
+  },
+  "devDependencies": {
+    "knex": "^0.95.11",
+    "mocha": "^9.1.1",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.6"
+  }
+}

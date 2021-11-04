@@ -1,0 +1,7 @@
+sequenceDiagram
+    User->>Controller: request
+    Controller->>Service: showCart
+    Service->>+CartRepository: getOne (userId)
+    CartRepository-->>-Service: CartEntity
+    Service-->>Controller: cartEntity
+    Controller-->>User: response

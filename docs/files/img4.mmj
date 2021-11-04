@@ -1,0 +1,10 @@
+sequenceDiagram
+    User->>Controller: request
+    Controller->>Service: removeCart
+    Service->>+CartRepository: getOne (userId)
+    CartRepository-->>-Service: CartEntity
+    Service->>CartEntity: remove (productId)
+    Service->>+CartRepository: update (cartEntity)
+    CartRepository-->>-Service: cartEntity
+    Service-->>Controller: cartEntity
+    Controller-->>User: response
